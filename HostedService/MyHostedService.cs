@@ -10,9 +10,11 @@ namespace HostedService
         private readonly MyService _myService;
 
         //public MyHostedService(MyService myService)
-        //{
-        //    _myService = myService;
-        //}
+        public MyHostedService()
+        {
+            //_myService = myService;
+            _myService = new MyService();
+        }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
